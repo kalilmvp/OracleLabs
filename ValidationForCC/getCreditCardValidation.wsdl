@@ -1,0 +1,25 @@
+<?binding.jca getCreditCardValidation_db.jca?>
+<wsdl:definitions name="getCreditCardValidation" targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/getCreditCardValidation" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/getCreditCardValidation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/getCreditCardValidation">
+    <plt:partnerLinkType name="getCreditCardValidation_plt">
+        <plt:role name="getCreditCardValidation_role">
+            <plt:portType name="tns:getCreditCardValidation_ptt"/>
+        </plt:role>
+    </plt:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/getCreditCardValidation" schemaLocation="xsd/getCreditCardValidation_table.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getCreditCardValidationSelect_inputParameters">
+        <wsdl:part name="getCreditCardValidationSelect_inputParameters" element="top:getCreditCardValidationSelect_ccnbInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="CreditcardinfoCollection_msg">
+        <wsdl:part name="CreditcardinfoCollection" element="top:CreditcardinfoCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="getCreditCardValidation_ptt">
+        <wsdl:operation name="getCreditCardValidationSelect">
+            <wsdl:input message="tns:getCreditCardValidationSelect_inputParameters"/>
+            <wsdl:output message="tns:CreditcardinfoCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

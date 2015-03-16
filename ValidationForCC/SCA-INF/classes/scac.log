@@ -1,0 +1,4 @@
+14/03/2015 14:54:51 oracle.mds
+NOTIFICATION: A instância PManager é criada sem suporte para multitenancy visto que o flag de JVM "oracle.multitenant.enabled" não está definido para ativar o suporte de multitenancy.
+14/03/2015 14:54:52 oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.

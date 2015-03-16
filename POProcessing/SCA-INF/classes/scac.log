@@ -1,0 +1,22 @@
+14/03/2015 16:16:49 oracle.mds
+NOTIFICATION: A instância PManager é criada sem suporte para multitenancy visto que o flag de JVM "oracle.multitenant.enabled" não está definido para ativar o suporte de multitenancy.
+14/03/2015 16:16:50 oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.
+14/03/2015 16:16:50 com.collaxa.cube.CubeLogger info
+INFO: validando "approveLargeOrder.bpel" ...
+14/03/2015 16:16:50 oracle.integration.platform.blocks.FabricConfigManager <clinit>
+AVISO: JRF is unable to determine the current application server platform.
+14/03/2015 16:16:50 oracle.integration.platform.blocks.WLSPlatformConfigurationProvider <clinit>
+AVISO: JRF is unable to determine the current application server platform.
+node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELSequenceBlock
+node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELSwitchBlock
+14/03/2015 16:16:51 com.collaxa.cube.CubeLogger info
+INFO: Composed "approveLargeOrder" in 100,5 milliseconds [nodes 11=0+11, 109,4 nodes/sec]
+14/03/2015 16:16:57 com.collaxa.cube.CubeLogger info
+INFO: Compiled "approveLargeOrder" in 6,174 seconds
+14/03/2015 16:16:57 com.collaxa.cube.CubeLogger info
+INFO: Gathered 3 files in 3,0 milliseconds
+
+14/03/2015 16:16:57 com.collaxa.cube.CubeLogger info
+INFO: Packaged "approveLargeOrder" in 14,7 milliseconds
+
