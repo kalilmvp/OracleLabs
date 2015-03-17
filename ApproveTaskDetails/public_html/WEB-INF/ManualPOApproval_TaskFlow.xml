@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="ManualPOApproval_TaskFlow">
+    <default-activity id="__110">taskDetails1_jspx</default-activity>
+    <data-control-scope id="__204">
+      <isolated/>
+    </data-control-scope>
+    <input-parameter-definition id="__1">
+      <name id="__3">bpmWorklistContext</name>
+      <value id="__2">#{pageFlowScope.bpmWorklistContext}</value>
+      <class id="__4"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__8">
+      <name id="__5">bpmWorklistTaskId</name>
+      <value id="__7">#{pageFlowScope.bpmWorklistTaskId}</value>
+      <class id="__6"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__11">
+      <name id="__9">bpmWorklistTaskVersion</name>
+      <value id="__12">#{pageFlowScope.bpmWorklistTaskVersion}</value>
+      <class id="__10"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__16">
+      <name id="__15">bpmWorklistHttpURL</name>
+      <value id="__14">#{pageFlowScope.bpmWorklistHttpURL}</value>
+      <class id="__13"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__20">
+      <name id="__18">parentURL</name>
+      <value id="__17">#{pageFlowScope.parentURL}</value>
+      <class id="__19"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__22">
+      <name id="__24">bpmWorklistHome</name>
+      <value id="__21">#{pageFlowScope.bpmWorklistHome}</value>
+      <class id="__23"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__27">
+      <name id="__25">bpmWorklistLogin</name>
+      <value id="__28">#{pageFlowScope.bpmWorklistLogin}</value>
+      <class id="__26"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__32">
+      <name id="__31">bpmWorklistLogout</name>
+      <value id="__30">#{pageFlowScope.bpmWorklistLogout}</value>
+      <class id="__29"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__33">
+      <name id="__35">bpmWorklistReassign</name>
+      <value id="__36">#{pageFlowScope.bpmWorklistReassign}</value>
+      <class id="__34"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__39">
+      <name id="__37">bpmWorklistHistory</name>
+      <value id="__38">#{pageFlowScope.bpmWorklistHistory}</value>
+      <class id="__40"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__44">
+      <name id="__41">bpmWorklistRequestInfo</name>
+      <value id="__42">#{pageFlowScope.bpmWorklistRequestInfo}</value>
+      <class id="__43"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__45">
+      <name id="__47">bpmWorklistRoute</name>
+      <value id="__46">#{pageFlowScope.bpmWorklistRoute}</value>
+      <class id="__48"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__49">
+      <name id="__51">bpmClientType</name>
+      <value id="__52">#{pageFlowScope.bpmClientType}</value>
+      <class id="__50"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__55">
+      <name id="__56">bpmBrowserWindowStatus</name>
+      <value id="__54">#{pageFlowScope.bpmBrowserWindowStatus}</value>
+      <class id="__53"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__60">
+      <name id="__57">bpmWorklistBackPage</name>
+      <value id="__58">#{pageFlowScope.bpmWorklistBackPage}</value>
+      <class id="__59"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__62">
+      <name id="__63">bpmWorklistSecurity</name>
+      <value id="__64">#{pageFlowScope.bpmWorklistSecurity}</value>
+      <class id="__61"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__68">
+      <name id="__67">bpmWorklistGraphHistory</name>
+      <value id="__66">#{pageFlowScope.bpmWorklistGraphSecurity}</value>
+      <class id="__65"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__70">
+      <name id="__69">lg</name>
+      <value id="__71">#{pageFlowScope.lg}</value>
+      <class id="__72"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__73">
+      <name id="__76">cy</name>
+      <value id="__75">#{pageFlowScope.cy}</value>
+      <class id="__74"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__77">
+      <name id="__78">vr</name>
+      <value id="__80">#{pageFlowScope.vr}</value>
+      <class id="__79"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__81">
+      <name id="__82">tz</name>
+      <value id="__83">#{pageFlowScope.tz}</value>
+      <class id="__84"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__87">
+      <name id="__88">df</name>
+      <value id="__85">#{pageFlowScope.df}</value>
+      <class id="__86"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__91">
+      <name id="__89">tf</name>
+      <value id="__90">#{pageFlowScope.tf}</value>
+      <class id="__92"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__96">
+      <name id="__93">dt</name>
+      <value id="__95">#{pageFlowScope.dt}</value>
+      <class id="__94"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__97">
+      <name id="__100">dateTimePattern</name>
+      <value id="__98">#{pageFlowScope.dateTimePattern}</value>
+      <class id="__99"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__103">
+      <name id="__102">datePattern</name>
+      <value id="__104">#{pageFlowScope.datePattern}</value>
+      <class id="__101"></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__108">
+      <name id="__107">timePattern</name>
+      <value id="__106">#{pageFlowScope.timePattern}</value>
+      <class id="__105"></class>
+    </input-parameter-definition>
+    <managed-bean id="__127">
+      <managed-bean-name id="__126">redirectBean</managed-bean-name>
+      <managed-bean-class id="__129">oracle.bpel.services.workflow.worklist.adf.PageRedirectBean</managed-bean-class>
+      <managed-bean-scope id="__128">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__133">
+      <managed-bean-name id="__132">addCommentBean</managed-bean-name>
+      <managed-bean-class id="__130">oracle.bpel.services.workflow.worklist.adf.AddCommentBean</managed-bean-class>
+      <managed-bean-scope id="__131">request</managed-bean-scope>
+      <managed-property id="__136">
+        <property-name id="__135">bindings</property-name>
+        <value id="__134">#{bindings}</value>
+      </managed-property>
+    </managed-bean>
+    <managed-bean id="__138">
+      <managed-bean-name id="__139">taskDocumentationBean</managed-bean-name>
+      <managed-bean-class id="__137">oracle.bpel.services.workflow.worklist.adf.TaskDocumentationBean</managed-bean-class>
+      <managed-bean-scope id="__140">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__143">
+      <managed-bean-name id="__144">addAttachmentBean</managed-bean-name>
+      <managed-bean-class id="__141">oracle.bpel.services.workflow.worklist.adf.AddAttachmentBean</managed-bean-class>
+      <managed-bean-scope id="__142">request</managed-bean-scope>
+      <managed-property id="__147">
+        <property-name id="__146">bindings</property-name>
+        <value id="__145">#{bindings}</value>
+      </managed-property>
+    </managed-bean>
+    <managed-bean id="__148">
+      <managed-bean-name id="__150">readAttachmentBean</managed-bean-name>
+      <managed-bean-class id="__149">oracle.bpel.services.workflow.worklist.adf.ReadAttachmentBean</managed-bean-class>
+      <managed-bean-scope id="__151">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__152">
+      <managed-bean-name id="__154">addDocumentBean</managed-bean-name>
+      <managed-bean-class id="__153">oracle.bpel.services.workflow.worklist.adf.AddDocumentBean</managed-bean-class>
+      <managed-bean-scope id="__155">request</managed-bean-scope>
+      <managed-property id="__158">
+        <property-name id="__156">bindings</property-name>
+        <value id="__157">#{bindings}</value>
+      </managed-property>
+    </managed-bean>
+    <managed-bean id="__159">
+      <managed-bean-name id="__161">readDocumentBean</managed-bean-name>
+      <managed-bean-class id="__162">oracle.bpel.services.workflow.worklist.adf.ReadDocumentBean</managed-bean-class>
+      <managed-bean-scope id="__160">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__165">
+      <managed-bean-name id="__163">popupBean</managed-bean-name>
+      <managed-bean-class id="__166">oracle.bpel.services.workflow.worklist.adf.ADFPopupBean</managed-bean-class>
+      <managed-bean-scope id="__164">request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__169">
+      <managed-bean-name id="__168">actionAvailable</managed-bean-name>
+      <managed-bean-class id="__167">oracle.bpel.services.workflow.worklist.adf.ActionEnablerBean</managed-bean-class>
+      <managed-bean-scope id="__170">request</managed-bean-scope>
+      <managed-property id="__173">
+        <property-name id="__171">bindings</property-name>
+        <value id="__172">#{bindings}</value>
+      </managed-property>
+    </managed-bean>
+    <managed-bean id="__175">
+      <managed-bean-name id="__174">invokeActionBean</managed-bean-name>
+      <managed-bean-class id="__177">oracle.bpel.services.workflow.worklist.adf.InvokeActionBean</managed-bean-class>
+      <managed-bean-scope id="__176">request</managed-bean-scope>
+      <managed-property id="__178">
+        <property-name id="__180">isReturnActivity</property-name>
+        <value id="__179">true</value>
+      </managed-property>
+      <managed-property id="__183">
+        <property-name id="__181">taskFormVersion</property-name>
+        <value id="__182">111160</value>
+      </managed-property>
+    </managed-bean>
+    <managed-bean id="__186">
+      <managed-bean-name id="__187">aleComponentBean</managed-bean-name>
+      <managed-bean-class id="__184">oracle.bpel.services.workflow.worklist.adf.ALEComponentBean</managed-bean-class>
+      <managed-bean-scope id="__185">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__191">
+      <managed-bean-name id="__189">taskFlowReassignBean</managed-bean-name>
+      <managed-bean-class id="__188">oracle.bpel.services.workflow.worklist.adf.TaskFlowReassignBean</managed-bean-class>
+      <managed-bean-scope id="__190">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__195">
+      <managed-bean-name id="__194">identityBrowserView</managed-bean-name>
+      <managed-bean-class id="__193">oracle.bpel.worklistapp.dc.idbrowser.beans.view.IdentityBrowserView</managed-bean-class>
+      <managed-bean-scope id="__192">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__198">
+      <managed-bean-name id="__197">userPreferencesBean</managed-bean-name>
+      <managed-bean-class id="__196">oracle.bpel.worklistapp.userprefs.UserPreferencesBean</managed-bean-class>
+      <managed-bean-scope id="__199">pageFlow</managed-bean-scope>
+      <managed-property id="__200">
+        <property-name id="__202">userPrefs</property-name>
+        <value id="__201">#{pageFlowScope.taskFlowReassignBean.userPrefs}</value>
+      </managed-property>
+    </managed-bean>
+    <finalizer id="__111">#{invokeActionBean.invokeScript}</finalizer>
+    <view id="taskDetails1_jspx">
+      <page id="__109">/taskDetails1.jspx</page>
+    </view>
+    <task-flow-return id="taskReturn">
+      <outcome id="__113">
+        <name id="__112">done</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="taskFlowRefresh">
+      <outcome id="__120">
+        <name id="__119">refresh</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__114">
+      <from-activity-id id="__116">*</from-activity-id>
+      <control-flow-case id="__115">
+        <from-outcome id="__117">closeTaskFlow</from-outcome>
+        <to-activity-id id="__118">taskReturn</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__121">
+      <from-activity-id id="__123">*</from-activity-id>
+      <control-flow-case id="__122">
+        <from-outcome id="__124">refreshTaskFlow</from-outcome>
+        <to-activity-id id="__125">taskFlowRefresh</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility id="__203">
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>
