@@ -13,9 +13,13 @@
              ui:wsdlLocation="getStatusByCCWrapper.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/CreditCardValidation/ValidationForCC/getStatusByCC#wsdl.interface(execute_ptt)"/>
   </reference>
-  <reference name="ManualPOApproval.TaskService"
+  <reference name="ManualPOApproval.TaskService_1"
              ui:wsdlLocation="oramds:/soa/shared/workflow/TaskServiceInterface.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)"
                     callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+  </reference>
+  <reference name="ManualApproval.ManualApproval_DecisionService_1"
+             ui:wsdlLocation="ManualApproval_DecisionService_1.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/ManualApproval/ManualApproval_DecisionService_1#wsdl.interface(IDecisionService)"/>
   </reference>
 </componentType>
