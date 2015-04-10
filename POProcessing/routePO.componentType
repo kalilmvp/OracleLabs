@@ -16,4 +16,9 @@
     <interface.wsdl interface="http://xmlns.oracle.com/POProcessing/POProcessing/approveLargeOrder#wsdl.interface(approveLargeOrder)"
                     callbackInterface="http://xmlns.oracle.com/POProcessing/POProcessing/approveLargeOrder#wsdl.interface(approveLargeOrderCallback)"/>
   </reference>
+  <reference name="FulfillmentProcess.fulfillmentprocess_client"
+             ui:wsdlLocation="FulfillmentProcess.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/POProcessing/POProcessing/FulfillmentProcess#wsdl.interface(FulfillmentProcess)"
+                    callbackInterface="http://xmlns.oracle.com/POProcessing/POProcessing/FulfillmentProcess#wsdl.interface(FulfillmentProcessCallback)"/>
+  </reference>
 </componentType>

@@ -46,6 +46,22 @@
           </invoke>
         </action>
       </case>
+      <case executionType="direct"
+            name="FulfillmentProcess.fulfillmentprocess_client.process_2">
+        <condition language="xpath">
+          <expression>$in.Purchase/inp1:PurchaseOrder/inp1:price * $in.Purchase/inp1:PurchaseOrder/inp1:quantity &lt; 1000</expression>
+        </condition>
+        <action>
+          <transform>
+            <part name="$out.payload"
+                  function="xslt(xsl/PurchaseOrder_To_Fulfillment_2.xsl, $in.Purchase)"/>
+          </transform>
+          <invoke reference="FulfillmentProcess.fulfillmentprocess_client"
+                  operation="process">
+            <onCallback operation="processResponse"/>
+          </invoke>
+        </action>
+      </case>
     </switch>
   </operation>
 </Mediator>

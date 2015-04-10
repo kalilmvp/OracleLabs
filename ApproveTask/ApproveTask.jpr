@@ -624,4 +624,7 @@
          </list>
       </hash>
    </hash>
+   <hash n="ResourceBundleOptions">
+      <value n="ADFRestricted" v="true"/>
+   </hash>
 </jpr:project>

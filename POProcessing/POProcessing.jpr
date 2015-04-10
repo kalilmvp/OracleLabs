@@ -71,6 +71,11 @@
       <string v="oracle.bpm.fusion.repository.BPMProjectSettings/bpmProjectsProcessesContentSet"/>
    </list>
    <value n="defaultPackage" v="poprocessing"/>
+   <url n="FulfillmentProcess_bpelFileURL" path="FulfillmentProcess.bpel"/>
+   <value n="FulfillmentProcess_Namespace" v="http://xmlns.oracle.com/POProcessing/POProcessing/FulfillmentProcess"/>
+   <value n="FulfillmentProcess_ProcessName" v="FulfillmentProcess"/>
+   <value n="FulfillmentProcess_Template" v="BPEL_ASYNC_PROCESS"/>
+   <value n="FulfillmentProcess_wsdl" v="FulfillmentProcess.wsdl"/>
    <value n="Namespace" v="http://xmlns.oracle.com/POProcessing/POProcessing/approveLargeOrder"/>
    <hash n="oracle.ide.model.ResourcePaths">
       <hash n="resourcesContentSet">

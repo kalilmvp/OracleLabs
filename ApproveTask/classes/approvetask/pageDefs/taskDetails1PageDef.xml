@@ -261,7 +261,8 @@
       </AttrNames>
     </attributeValues>
     <tree IterBinding="assigneesIterator" id="assignees">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType"
+                      Name="assignees0">
         <AttrNames>
           <Item Value="id"/>
           <Item Value="displayName"/>
@@ -316,7 +317,8 @@
       </AttrNames>
     </attributeValues>
     <tree IterBinding="userCommentIterator" id="userComment">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.commentType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.commentType"
+                      Name="userComment0">
         <AttrNames>
           <Item Value="comment"/>
           <Item Value="updatedDate"/>
@@ -333,7 +335,8 @@
           <Item Value="updatedBy"/>
         </Accessors>
       </nodeDefinition>
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType"
+                      Name="userComment1">
         <AttrNames>
           <Item Value="id"/>
           <Item Value="displayName"/>
@@ -357,7 +360,8 @@
       </AttrNames>
     </attributeValues>
     <tree IterBinding="updatedByIterator" id="updatedBy">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType"
+                      Name="updatedBy0">
         <AttrNames>
           <Item Value="id"/>
           <Item Value="displayName"/>
@@ -367,7 +371,8 @@
       </nodeDefinition>
     </tree>
     <tree IterBinding="attachmentIterator" id="attachment">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.attachmentType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.attachmentType"
+                      Name="attachment0">
         <AttrNames>
           <Item Value="content"/>
           <Item Value="mimeType"/>
@@ -395,7 +400,8 @@
           <Item Value="isContentEncoded"/>
         </AttrNames>
       </nodeDefinition>
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType"
+                      Name="attachment1">
         <AttrNames>
           <Item Value="name"/>
           <Item Value="value"/>
@@ -477,7 +483,8 @@
     <action IterBinding="ucmMetadataItemIterator" id="Delete2"
             RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <tree IterBinding="ucmMetadataItemIterator" id="ucmMetadataItem">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType"
+                      Name="ucmMetadataItem0">
         <AttrNames>
           <Item Value="name"/>
           <Item Value="value"/>
@@ -497,7 +504,8 @@
       </AttrNames>
     </attributeValues>
     <tree IterBinding="userCommentIterator" id="userComment1">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.commentType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.commentType"
+                      Name="userComment10">
         <AttrNames>
           <Item Value="comment"/>
           <Item Value="updatedDate"/>
@@ -514,7 +522,8 @@
           <Item Value="updatedBy"/>
         </Accessors>
       </nodeDefinition>
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType"
+                      Name="userComment11">
         <AttrNames>
           <Item Value="id"/>
           <Item Value="displayName"/>
@@ -524,7 +533,8 @@
       </nodeDefinition>
     </tree>
     <tree IterBinding="updatedByIterator" id="updatedBy2">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.identityType"
+                      Name="updatedBy20">
         <AttrNames>
           <Item Value="id"/>
           <Item Value="displayName"/>
@@ -534,7 +544,8 @@
       </nodeDefinition>
     </tree>
     <tree IterBinding="attachmentIterator" id="attachment1">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.attachmentType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.attachmentType"
+                      Name="attachment10">
         <AttrNames>
           <Item Value="content"/>
           <Item Value="mimeType"/>
@@ -562,7 +573,8 @@
           <Item Value="isContentEncoded"/>
         </AttrNames>
       </nodeDefinition>
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType"
+                      Name="attachment11">
         <AttrNames>
           <Item Value="name"/>
           <Item Value="value"/>
@@ -571,7 +583,8 @@
       </nodeDefinition>
     </tree>
     <tree IterBinding="ucmMetadataItemIterator" id="ucmMetadataItem1">
-      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType">
+      <nodeDefinition DefName="ApproveTask_ManualPOApproval.ucmMetadataItemType"
+                      Name="ucmMetadataItem10">
         <AttrNames>
           <Item Value="name"/>
           <Item Value="value"/>
