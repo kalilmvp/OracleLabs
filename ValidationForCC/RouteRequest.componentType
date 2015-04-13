@@ -11,4 +11,7 @@
              ui:wsdlLocation="getCreditCardValidation.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/getCreditCardValidation#wsdl.interface(getCreditCardValidation_ptt)"/>
   </reference>
+  <reference name="validateCC" ui:wsdlLocation="validateCC.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/validateCC#wsdl.interface(validateCC_ptt)"/>
+  </reference>
 </componentType>

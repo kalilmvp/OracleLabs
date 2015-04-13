@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <References xmlns="http://xmlns.oracle.com/adf/jndi">
-   <Reference name="BD_SOA_VM" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="BD_SOA_VM" xmlns="">
+   <Reference name="LabsConnection" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="LabsConnection" xmlns="">
       <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
       <RefAddresses>
          <StringRefAddr addrType="sid">

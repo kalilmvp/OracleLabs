@@ -7,8 +7,8 @@
    <entry key="CREDITCARDINFO.CREDITRATING:db_column_not_null">false</entry>
    <entry key="CREDITCARDINFO:db_column_3">CCNUMBER</entry>
    <entry key="CREDITCARDINFO:db_column_2">LAST_NAME</entry>
-   <entry key="CREDITCARDINFO.CREDITRATING:db_column_type">NUMBER</entry>
    <entry key="CREDITCARDINFO:db_column_1">FIRST_NAME</entry>
+   <entry key="CREDITCARDINFO.CREDITRATING:db_column_type">NUMBER</entry>
    <entry key="CREDITCARDINFO:db_column_0">SSN</entry>
    <entry key="CREDITCARDINFO.STATUS:db_column_not_null">true</entry>
    <entry key="CREDITCARDINFO.LAST_NAME:db_column_not_null">false</entry>
@@ -17,10 +17,10 @@
    <entry key="CREDITCARDINFO.FIRST_NAME:db_column_type">VARCHAR2</entry>
    <entry key="CREDITCARDINFO.SSN:db_column_not_null">true</entry>
    <entry key="CREDITCARDINFO.SSN:db_column_size">15</entry>
-   <entry key="CREDITCARDINFO.CREDITRATING:db_column_precision">0</entry>
    <entry key="CREDITCARDINFO.CCNUMBER:db_column_type">VARCHAR2</entry>
-   <entry key="return_single_result_set">false</entry>
+   <entry key="CREDITCARDINFO.CREDITRATING:db_column_precision">0</entry>
    <entry key="CREDITCARDINFO.FIRST_NAME:db_column_not_null">false</entry>
+   <entry key="return_single_result_set">false</entry>
    <entry key="CREDITCARDINFO.LAST_NAME:db_column_type">VARCHAR2</entry>
    <entry key="CREDITCARDINFO.STATUS:db_column_size">20</entry>
    <entry key="CREDITCARDINFO:db_table_type">TABLE</entry>

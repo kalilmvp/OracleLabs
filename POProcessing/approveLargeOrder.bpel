@@ -37,7 +37,8 @@
          xmlns:ns6="http://www.globalcompany.com/ns/OrderBooking/rules"
          xmlns:ns7="http://xmlns.oracle.com/ManualApproval/ManualApproval_DecisionService_1"
          xmlns:ns8="http://xmlns.oracle.com/bpel"
-         xmlns:ns9="http://xmlns.oracle.com/POProcessing/POProcessing/FulfillmentProcess">
+         xmlns:ns9="http://xmlns.oracle.com/POProcessing/POProcessing/FulfillmentProcess"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <!-- 
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +89,7 @@
                   messageType="ns4:taskMessage"/>
         <variable name="Invoke_Fulfillment_process_InputVariable"
                   messageType="ns9:FulfillmentProcessRequestMessage"/>
+        <variable messageType="bpelx:RuntimeFaultMessage" name="FaultVar"/>
     </variables>
 
     <!-- 
@@ -115,11 +117,37 @@
                     query="/ns2:Order"/>
             </copy>
         </assign>
-        <invoke name="invokeCCStatusService" bpelx:invokeAsDetail="no"
-                inputVariable="invokeCCStatusService_execute_InputVariable"
-                outputVariable="invokeCCStatusService_execute_OutputVariable"
-                partnerLink="getCreditCardStatusCC" portType="ns1:execute_ptt"
-                operation="execute"/>
+        <scope name="checkCC" variableAccessSerializable="no">
+            <faultHandlers>
+                <catch faultName="bpelx:bindingFault" faultVariable="FaultVar">
+                    <switch name="switch_unknowncc">
+                        <case condition="bpws:getVariableData('FaultVar','code') = '20001'">
+                            <bpelx:annotation>
+                                <bpelx:general/>
+                            </bpelx:annotation>
+                            <assign name="Assign_UNKNOWNCC">
+                                <copy>
+                                    <from expression="'UNKNOWN CC’'"/>
+                                    <to variable="invokeCCStatusService_execute_OutputVariable"
+                                        part="Reply"
+                                        query="/ns3:creditcardStatus"/>
+                                </copy>
+                            </assign>
+                        </case>
+                        <otherwise>
+                            <throw name="Throw_Binding_Fault"
+                                   faultName="bpelx:bindingFault"
+                                   faultVariable="FaultVar"/>
+                        </otherwise>
+                    </switch>
+                </catch>
+            </faultHandlers>
+            <invoke name="invokeCCStatusService" bpelx:invokeAsDetail="no"
+                    inputVariable="invokeCCStatusService_execute_InputVariable"
+                    outputVariable="invokeCCStatusService_execute_OutputVariable"
+                    partnerLink="getCreditCardStatusCC"
+                    portType="ns1:execute_ptt" operation="execute"/>
+        </scope>
         <switch name="EvalueateCCStatus">
             <case condition="bpws:getVariableData('invokeCCStatusService_execute_OutputVariable','Reply','/ns3:creditcardStatus')  = 'VALID'">
                 <bpelx:annotation>

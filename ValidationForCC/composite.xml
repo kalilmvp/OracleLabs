@@ -14,6 +14,8 @@
           location="getCreditCardValidation.wsdl" importType="wsdl"/>
   <import namespace="http://oracle.com/sca/soapservice/CreditCardValidation/ValidationForCC/getStatusByCC"
           location="getStatusByCC.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/validateCC"
+          location="validateCC.wsdl" importType="wsdl"/>
   <service name="getStatusByCC" ui:wsdlLocation="getStatusByCC.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/CreditCardValidation/ValidationForCC/getStatusByCC#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/CreditCardValidation/ValidationForCC/getStatusByCC#wsdl.endpoint(getStatusByCC/execute_pt)">
@@ -36,6 +38,17 @@
     <property name="jca.retry.maxInterval" type="xs:string" many="false"
               override="may">120</property>
   </reference>
+  <reference name="validateCC" ui:wsdlLocation="validateCC.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/db/CreditCardValidation/ValidationForCC/validateCC#wsdl.interface(validateCC_ptt)"/>
+    <binding.jca config="validateCC_db.jca"/>
+    <property name="jca.retry.count" type="xs:int" many="false" override="may">4</property>
+    <property name="jca.retry.interval" type="xs:int" many="false"
+              override="may">1</property>
+    <property name="jca.retry.backoff" type="xs:int" many="false"
+              override="may">2</property>
+    <property name="jca.retry.maxInterval" type="xs:string" many="false"
+              override="may">120</property>
+  </reference>
   <wire>
     <source.uri>getStatusByCC</source.uri>
     <target.uri>RouteRequest/RouteRequest</target.uri>
@@ -43,5 +56,9 @@
   <wire>
     <source.uri>RouteRequest/getCreditCardValidation</source.uri>
     <target.uri>getCreditCardValidation</target.uri>
+  </wire>
+  <wire>
+    <source.uri>RouteRequest/validateCC</source.uri>
+    <target.uri>validateCC</target.uri>
   </wire>
 </composite>

@@ -6,12 +6,6 @@
   <operation name="execute" deliveryPolicy="AllOrNothing" priority="4"
              validateSchema="false">
     <switch>
-      <case executionType="direct" name="WriteApprovalResults.Write">
-        <action/>
-      </case>
-      <case executionType="direct" name="getCreditCardStatusCC.execute">
-        <action/>
-      </case>
       <case executionType="direct" name="WriteApprovalResults.Write_2">
         <condition language="xpath">
           <expression>$in.Purchase/inp1:PurchaseOrder/inp1:price * $in.Purchase/inp1:PurchaseOrder/inp1:quantity &lt; 1000</expression>

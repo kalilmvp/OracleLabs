@@ -1,6 +1,6 @@
 <adapter-config name="getCreditCardValidation" adapter="Database Adapter" wsdlLocation="getCreditCardValidation.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
   
-  <connection-factory location="eis/DB/soademoDatabase" UIConnectionName="BD_SOA_VM" adapterRef=""/>
+  <connection-factory location="eis/DB/soademoDatabase" UIConnectionName="LabsConnection" adapterRef=""/>
   <endpoint-interaction portType="getCreditCardValidation_ptt" operation="getCreditCardValidationSelect">
     <interaction-spec className="oracle.tip.adapter.db.DBReadInteractionSpec">
       <property name="DescriptorName" value="getCreditCardValidation.Creditcardinfo"/>
