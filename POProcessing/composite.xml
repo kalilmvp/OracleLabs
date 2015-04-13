@@ -32,7 +32,14 @@
           location="FulfillmentProcess.wsdl" importType="wsdl"/>
   <import namespace="http://xmlns.oracle.com/FulfillmentRules/OracleRulesFulfillment"
           location="OracleRulesFulfillmentWrapper.wsdl" importType="wsdl"/>
-
+  <import namespace="http://schemas.oracle.com/events/edl/POEvents"
+          location="POEvents.edl" importType="edl"/>
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_USPS"
+          location="JMS_USPS.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_UPS"
+          location="JMS_UPS.wsdl" importType="wsdl"/>
+  <import namespace="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_FedEx"
+          location="JMS_FedEx.wsdl" importType="wsdl"/>
   <service name="receivePO" ui:wsdlLocation="receivePO.wsdl">
     <interface.wsdl interface="http://oracle.com/sca/soapservice/POProcessing/POProcessing/receivePO#wsdl.interface(execute_ptt)"/>
     <binding.ws port="http://oracle.com/sca/soapservice/POProcessing/POProcessing/receivePO#wsdl.endpoint(receivePO/execute_pt)">
@@ -62,6 +69,14 @@
     <property name="bpel.config.oneWayDeliveryPolicy" type="xs:string"
               many="false">async.persist</property>
   </component>
+  <component name="receiveNewPO">
+    <implementation.mediator src="receiveNewPO.mplan"/>
+    <business-events>
+      <subscribe xmlns:sub1="http://schemas.oracle.com/events/edl/POEvents"
+                 name="sub1:NewPO" consistency="oneAndOnlyOne"
+                 runAsRoles="$publisher"/>
+    </business-events>
+  </component>
   <reference name="WriteApprovalResults"
              ui:wsdlLocation="WriteApprovalResults.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/file/POProcessing/POProcessing/WriteApprovalResults#wsdl.interface(Write_ptt)"/>
@@ -76,6 +91,18 @@
       <property name="weblogic.wsee.wsat.transaction.flowOption"
                 type="xs:string" many="false">WSDLDriven</property>
     </binding.ws>
+  </reference>
+  <reference name="JMS_USPS" ui:wsdlLocation="JMS_USPS.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_USPS#wsdl.interface(Produce_Message_ptt)"/>
+    <binding.jca config="JMS_USPS_jms.jca"/>
+  </reference>
+  <reference name="JMS_UPS" ui:wsdlLocation="JMS_UPS.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_UPS#wsdl.interface(Produce_Message_ptt)"/>
+    <binding.jca config="JMS_UPS_jms.jca"/>
+  </reference>
+  <reference name="JMS_FedEx" ui:wsdlLocation="JMS_FedEx.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_FedEx#wsdl.interface(Produce_Message_ptt)"/>
+    <binding.jca config="JMS_FedEx_jms.jca"/>
   </reference>
   <wire>
     <source.uri>receivePO</source.uri>
@@ -112,5 +139,21 @@
   <wire>
     <source.uri>routePO/FulfillmentProcess.fulfillmentprocess_client</source.uri>
     <target.uri>FulfillmentProcess/fulfillmentprocess_client</target.uri>
+  </wire>
+  <wire>
+    <source.uri>receiveNewPO/routePO.routePO</source.uri>
+    <target.uri>routePO/routePO</target.uri>
+  </wire>
+  <wire>
+    <source.uri>FulfillmentProcess/JMS_FedEx</source.uri>
+    <target.uri>JMS_FedEx</target.uri>
+  </wire>
+  <wire>
+    <source.uri>FulfillmentProcess/JMS_UPS</source.uri>
+    <target.uri>JMS_UPS</target.uri>
+  </wire>
+  <wire>
+    <source.uri>FulfillmentProcess/JMS_USPS</source.uri>
+    <target.uri>JMS_USPS</target.uri>
   </wire>
 </composite>

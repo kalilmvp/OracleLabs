@@ -13,4 +13,13 @@
              ui:wsdlLocation="OracleRulesFulfillmentWrapper.wsdl">
     <interface.wsdl interface="http://xmlns.oracle.com/FulfillmentRules/OracleRulesFulfillment#wsdl.interface(IDecisionService)"/>
   </reference>
+  <reference name="JMS_FedEx" ui:wsdlLocation="JMS_FedEx.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_FedEx#wsdl.interface(Produce_Message_ptt)"/>
+  </reference>
+  <reference name="JMS_UPS" ui:wsdlLocation="JMS_UPS.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_UPS#wsdl.interface(Produce_Message_ptt)"/>
+  </reference>
+  <reference name="JMS_USPS" ui:wsdlLocation="JMS_USPS.wsdl">
+    <interface.wsdl interface="http://xmlns.oracle.com/pcbpel/adapter/jms/POProcessing/POProcessing/JMS_USPS#wsdl.interface(Produce_Message_ptt)"/>
+  </reference>
 </componentType>

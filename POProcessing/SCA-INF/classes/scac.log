@@ -1,37 +1,37 @@
-13/04/2015 10:55:21 oracle.mds
+13/04/2015 18:13:30 oracle.mds
 NOTIFICATION: A instância PManager é criada sem suporte para multitenancy visto que o flag de JVM "oracle.multitenant.enabled" não está definido para ativar o suporte de multitenancy.
-13/04/2015 10:55:22 oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+13/04/2015 18:13:31 oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
 INFO: XMLSchema incremental build enabled.
-13/04/2015 10:55:22 com.collaxa.cube.CubeLogger info
+13/04/2015 18:13:31 com.collaxa.cube.CubeLogger info
 INFO: validando "approveLargeOrder.bpel" ...
-13/04/2015 10:55:22 oracle.integration.platform.blocks.FabricConfigManager <clinit>
+13/04/2015 18:13:32 oracle.integration.platform.blocks.FabricConfigManager <clinit>
 AVISO: JRF is unable to determine the current application server platform.
-13/04/2015 10:55:22 oracle.integration.platform.blocks.WLSPlatformConfigurationProvider <clinit>
+13/04/2015 18:13:32 oracle.integration.platform.blocks.WLSPlatformConfigurationProvider <clinit>
 AVISO: JRF is unable to determine the current application server platform.
 node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELSequenceBlock
 node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELScopeBlock
 node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELCatchFaultBlock
 node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELSwitchBlock
 node class name com.collaxa.cube.engine.ext.bpel.v1.blocks.BPELCompensationHandlerBlock
-13/04/2015 10:55:22 com.collaxa.cube.CubeLogger info
-INFO: Composed "approveLargeOrder" in 62,3 milliseconds [nodes 56=2+54, 898,5 nodes/sec]
-13/04/2015 10:55:27 com.collaxa.cube.CubeLogger info
-INFO: Compiled "approveLargeOrder" in 4,947 seconds
-13/04/2015 10:55:27 com.collaxa.cube.CubeLogger info
-INFO: Gathered 6 files in 2,2 milliseconds
+13/04/2015 18:13:32 com.collaxa.cube.CubeLogger info
+INFO: Composed "approveLargeOrder" in 192,1 milliseconds [nodes 56=2+54, 291,5 nodes/sec]
+13/04/2015 18:13:36 com.collaxa.cube.CubeLogger info
+INFO: Compiled "approveLargeOrder" in 3,852 seconds
+13/04/2015 18:13:36 com.collaxa.cube.CubeLogger info
+INFO: Gathered 6 files in 1,2 milliseconds
 
-13/04/2015 10:55:27 com.collaxa.cube.CubeLogger info
-INFO: Packaged "approveLargeOrder" in 20,2 milliseconds
+13/04/2015 18:13:36 com.collaxa.cube.CubeLogger info
+INFO: Packaged "approveLargeOrder" in 30,7 milliseconds
 
-13/04/2015 10:55:27 com.collaxa.cube.CubeLogger info
+13/04/2015 18:13:36 com.collaxa.cube.CubeLogger info
 INFO: validando "FulfillmentProcess.bpel" ...
-13/04/2015 10:55:27 com.collaxa.cube.CubeLogger info
-INFO: Composed "FulfillmentProcess" in 10,8 milliseconds [nodes 14=1+13, 1.297,2 nodes/sec]
-13/04/2015 10:55:32 com.collaxa.cube.CubeLogger info
-INFO: Compiled "FulfillmentProcess" in 4,130 seconds
-13/04/2015 10:55:32 com.collaxa.cube.CubeLogger info
-INFO: Gathered 5 files in 1,6 milliseconds
+13/04/2015 18:13:36 com.collaxa.cube.CubeLogger info
+INFO: Composed "FulfillmentProcess" in 10,8 milliseconds [nodes 25=1+24, 2.307,0 nodes/sec]
+13/04/2015 18:13:39 com.collaxa.cube.CubeLogger info
+INFO: Compiled "FulfillmentProcess" in 2,958 seconds
+13/04/2015 18:13:39 com.collaxa.cube.CubeLogger info
+INFO: Gathered 5 files in 1,2 milliseconds
 
-13/04/2015 10:55:32 com.collaxa.cube.CubeLogger info
-INFO: Packaged "FulfillmentProcess" in 9,2 milliseconds
+13/04/2015 18:13:39 com.collaxa.cube.CubeLogger info
+INFO: Packaged "FulfillmentProcess" in 6,6 milliseconds
 
